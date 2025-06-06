@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday TAMPY!</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: linear-gradient(135deg, #ffe6f0, #ccf2ff);
+      font-family: 'Comic Sans MS', cursive;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 4rem;
+      margin-top: 50px;
+      color: #fff;
+      animation: glow 2s infinite alternate;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #fff;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff66cc, 0 0 20px #ff66cc; }
+      to { text-shadow: 0 0 20px #ff33cc, 0 0 40px #ff33cc; }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.1); opacity: 0.8; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .balloon {
+      position: absolute;
+      bottom: -150px;
+      width: 60px;
+      height: 80px;
+      background: pink;
+      border-radius: 50% 50% 50% 50%;
+      animation: floatUp 8s linear infinite;
+    }
+
+    .string {
+      position: absolute;
+      width: 2px;
+      height: 40px;
+      background: #333;
+      top: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* Create multiple balloons with different colors and delays */
+    .balloon:nth-child(1) { left: 10%; background: #FF6F91; animation-delay: 0s; }
+    .balloon:nth-child(2) { left: 25%; background: #FF9671; animation-delay: 1s; }
+    .balloon:nth-child(3) { left: 40%; background: #FFC75F; animation-delay: 2s; }
+    .balloon:nth-child(4) { left: 55%; background: #F9F871; animation-delay: 3s; }
+    .balloon:nth-child(5) { left: 70%; background: #A0E7E5; animation-delay: 4s; }
+    .balloon:nth-child(6) { left: 85%; background: #B4F8C8; animation-delay: 5s; }
+
+    .container {
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>🎉 Happy Birthday TAMPY 🎉</h1>
+    <h2>Wishing you joy, love & balloons! 🎈</h2>
+
+    <div class="balloon"><div class="string"></div></div>
+    <div class="balloon"><div class="string"></div></div>
+    <div class="balloon"><div class="string"></div></div>
+    <div class="balloon"><div class="string"></div></div>
+    <div class="balloon"><div class="string"></div></div>
+    <div class="balloon"><div class="string"></div></div>
+  </div>
+
+</body>
+</html>
